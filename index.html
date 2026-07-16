@@ -6,7 +6,7 @@
     <title>Portofolio | Andika Wijaya</title>
     <meta
       name="description"
-      content="Portofolio pribadi Andika Wijaya, berisi informasi singkat, proyek, dan kontak."
+      content="Portofolio profesional Andika Wijaya, berisi ringkasan pengalaman, keahlian, proyek, dan kontak."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +33,7 @@
         <div class="nav-links">
           <a href="#home">Home</a>
           <a href="#about">Tentang</a>
+          <a href="#skills">Keahlian</a>
           <a href="#projects">Proyek</a>
           <a href="#contact">Kontak</a>
         </div>
@@ -42,92 +43,182 @@
     <main id="home">
       <section class="hero container">
         <div class="hero__content">
-          <p class="eyebrow">Selamat datang di portofolio saya</p>
-          <h1>Saya adalah pengembang web yang fokus pada pengalaman digital yang modern.</h1>
+          <p class="eyebrow">Professional Portfolio</p>
+          <h1>Pengembang web yang fokus pada solusi digital yang rapi, cepat, dan profesional.</h1>
           <p class="hero__text">
-            Saya suka merancang dan membangun website yang cepat, menarik, dan mudah digunakan.
+            Saya menekankan kualitas visual, pengalaman pengguna, dan performa website agar setiap
+            produk terasa modern dan dapat dipercaya.
           </p>
           <div class="hero__actions">
             <a href="#projects" class="btn btn--primary">Lihat Proyek</a>
             <a href="#contact" class="btn btn--secondary">Hubungi Saya</a>
           </div>
+
+          <div class="hero__highlights">
+            <div>
+              <strong>3+</strong>
+              <span>Proyek</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Dedikasi</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Belajar</span>
+            </div>
+          </div>
         </div>
 
-        <div class="hero__card">
-          <h2>Info Singkat</h2>
-          <ul>
-            <li>📍 Berbasis di Indonesia</li>
-            <li>💡 Fokus pada Frontend & UI</li>
-            <li>⚡ Memprioritaskan performa dan estetika</li>
-          </ul>
+        <div class="hero__visual">
+          <div class="photo-frame">
+            <img src="assets/profile-photo.svg" alt="Foto Andika Wijaya" />
+          </div>
+          <div class="mini-card">
+            <p>Available for collaboration</p>
+            <span>Frontend • UI • Web Development</span>
+          </div>
         </div>
       </section>
 
       <section id="about" class="section container">
         <div class="section__heading">
           <p class="eyebrow">Tentang Saya</p>
-          <h2>Bangun ide menjadi pengalaman yang terasa hidup.</h2>
+          <h2>Merancang pengalaman digital yang jelas, elegan, dan fungsional.</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-card">
-            <h3>Siapa saya?</h3>
+          <article class="about-card">
+            <h3>Profil</h3>
             <p>
-              Saya adalah seseorang yang senang belajar hal baru di dunia teknologi, terutama dalam
-              pengembangan website dan desain antarmuka. Saya percaya bahwa desain yang baik harus
-              memudahkan pengguna dan tetap terasa personal.
+              Saya adalah individu yang tertarik pada pengembangan web dan desain antarmuka dengan
+              pendekatan yang profesional dan modern. Saya percaya bahwa desain yang baik harus
+              menggabungkan estetika, kenyamanan pengguna, dan efisiensi teknis.
             </p>
-          </div>
+          </article>
 
-          <div class="about-card">
-            <h3>Keahlian</h3>
-            <div class="tag-list">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Responsive Design</span>
-              <span>UI/UX Basics</span>
-            </div>
-          </div>
+          <article class="about-card">
+            <h3>Fokus Utama</h3>
+            <ul class="focus-list">
+              <li>Desain UI/UX yang bersih dan intuitif</li>
+              <li>Pengembangan website responsif</li>
+              <li>Optimasi performa dan pengalaman pengguna</li>
+            </ul>
+          </article>
         </div>
       </section>
 
-      <section id="projects" class="section section--alt">
+      <section id="skills" class="section section--alt">
         <div class="container">
           <div class="section__heading">
-            <p class="eyebrow">Proyek</p>
-            <h2>Beberapa karya yang pernah saya buat.</h2>
+            <p class="eyebrow">Keahlian</p>
+            <h2>Teknologi dan kemampuan utama yang saya kuasai.</h2>
           </div>
 
-          <div class="project-grid">
-            <article class="project-card">
-              <h3>Landing Page Produk</h3>
-              <p>Website promosi sederhana dengan desain modern dan struktur yang rapi.</p>
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 3h16l-1.5 14.2L12 21l-6.5-3.8L4 3z" />
+                </svg>
+              </div>
+              <h3>HTML5</h3>
+              <p>Struktur konten yang bersih dan terorganisasi.</p>
             </article>
-            <article class="project-card">
-              <h3>Portofolio Pribadi</h3>
-              <p>Halaman portofolio satu halaman yang menarik dan mudah dinavigasi.</p>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 3h16l-1.3 13.3L12 21l-6.7-4.7L4 3z" />
+                </svg>
+              </div>
+              <h3>CSS3</h3>
+              <p>Styling modern dengan layout responsif dan polished.</p>
             </article>
-            <article class="project-card">
-              <h3>Dashboard Sederhana</h3>
-              <p>Antarmuka dashboard yang fokus pada keterbacaan dan pemahaman pengguna.</p>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 3h16v18H4z" />
+                  <path d="M8 7h8v2H8zm0 4h5v2H8z" />
+                </svg>
+              </div>
+              <h3>JavaScript</h3>
+              <p>Interaksi web yang dinamis dan pengalaman yang lebih hidup.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 4h14l-1.2 12.3L12 20l-5.8-3.7L5 4z" />
+                </svg>
+              </div>
+              <h3>React</h3>
+              <p>Komponen UI modular dan performa yang lebih optimal.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 4v16" />
+                  <path d="M4 12h16" />
+                </svg>
+              </div>
+              <h3>Figma</h3>
+              <p>Konsep desain visual yang terstruktur dan user-centered.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 4h10l-2 5H9l-2-5z" />
+                  <path d="M5 10h14l-1.2 6.2A2 2 0 0 1 15.8 18H8.2a2 2 0 0 1-2-1.8L5 10z" />
+                </svg>
+              </div>
+              <h3>Git/GitHub</h3>
+              <p>Kolaborasi dan manajemen versi yang rapi dan profesional.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section container">
+      <section id="projects" class="section container">
         <div class="section__heading">
-          <p class="eyebrow">Kontak</p>
-          <h2>Siap bekerja sama atau berdiskusi ide baru.</h2>
+          <p class="eyebrow">Proyek</p>
+          <h2>Portofolio kerja yang mencerminkan pendekatan modern dan terukur.</h2>
         </div>
 
-        <div class="contact-card">
-          <p>Hubungi saya melalui email atau media sosial berikut:</p>
-          <div class="contact-links">
-            <a href="mailto:andika@example.com">andika@example.com</a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Landing Page Produk</h3>
+            <p>Website promosi yang fokus pada narasi brand, struktur yang jelas, dan visual yang premium.</p>
+          </article>
+          <article class="project-card">
+            <h3>Portofolio Pribadi</h3>
+            <p>Halaman presentasi profesional dengan estetika yang kuat dan pengalaman navigasi yang halus.</p>
+          </article>
+          <article class="project-card">
+            <h3>Dashboard Interaktif</h3>
+            <p>Antarmuka data yang rapi, informatif, dan dirancang agar mudah dipahami pengguna.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section section--alt">
+        <div class="container">
+          <div class="section__heading">
+            <p class="eyebrow">Kontak</p>
+            <h2>Siap berkolaborasi atau membahas ide pengembangan berikutnya.</h2>
+          </div>
+
+          <div class="contact-card">
+            <p>Hubungi saya melalui email atau platform profesional berikut:</p>
+            <div class="contact-links">
+              <a href="mailto:andika@example.com">andika@example.com</a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
           </div>
         </div>
       </section>
