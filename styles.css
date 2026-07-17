@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 90px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--text);
@@ -89,15 +93,15 @@ img {
 .brand__logo {
   display: grid;
   place-items: center;
-  padding: 0.35rem 0.7rem;
-  border-radius: 12px;
-  border: 1px solid rgba(125, 211, 252, 0.35);
-  background: linear-gradient(135deg, rgba(125, 211, 252, 0.16), rgba(139, 92, 246, 0.2));
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+  padding: 0.4rem 0.75rem;
+  border-radius: 14px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.26), rgba(139, 92, 246, 0.28));
+  color: #fff;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
+  box-shadow: 0 10px 24px rgba(125, 211, 252, 0.18);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .nav-links {
@@ -171,7 +175,8 @@ img {
 .about-card p,
 .project-card p,
 .skill-card p,
-.contact-card p {
+.contact-card p,
+.timeline-card p {
   color: var(--muted);
   font-size: 1rem;
 }
@@ -290,13 +295,17 @@ img {
 .about-card,
 .project-card,
 .skill-card,
-.contact-card {
+.contact-card,
+.timeline-card,
+.download-card,
+.contact-item {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 24px;
   padding: 1.4rem;
   box-shadow: var(--shadow);
   transition: transform 0.25s ease, border-color 0.25s ease;
+  backdrop-filter: blur(18px);
 }
 
 .about-card:hover,
@@ -339,6 +348,45 @@ img {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-card {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1rem;
+  padding: 1.2rem 1.3rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow);
+}
+
+.timeline-year {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(139, 92, 246, 0.2));
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .focus-list {
@@ -512,13 +560,18 @@ img {
   .about-grid,
   .skills-grid,
   .project-grid,
-  .contact-layout {
+  .contact-layout,
+  .timeline-card {
     grid-template-columns: 1fr;
   }
 
   .download-card {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .timeline-card {
+    grid-template-columns: 1fr;
   }
 
   .hero {

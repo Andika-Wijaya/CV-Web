@@ -1,5 +1,6 @@
 const toggleButton = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const revealItems = document.querySelectorAll('.reveal');
 
 if (toggleButton && navLinks) {
   toggleButton.addEventListener('click', () => {
@@ -13,4 +14,20 @@ if (toggleButton && navLinks) {
       toggleButton.setAttribute('aria-expanded', 'false');
     });
   });
+}
+
+if (revealItems.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
 }
